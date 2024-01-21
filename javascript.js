@@ -36,18 +36,38 @@ function playRound(playerSelection, computerSelection) {
   } else if (playerSelection === "scissors" && computerSelection === "rock") {
     return "You lose! rock beats scissors!";
   } else if (playerSelection === "rock" && computerSelection === "rock") {
-    return "you both chose rock!";
+    return "You both chose rock!";
   } else if (
     playerSelection === "scissors" &&
     computerSelection === "scissors"
   ) {
-    return "you both chose scissors!";
+    return "You both chose scissors!";
   }
 
   // paper and scissors
-  // if (playerSelection === "" )
+  if (playerSelection === "paper" && computerSelection === "scissors") {
+    return "You lose! scissors beats paper!";
+  } else if (playerSelection === "scissors" && computerSelection === "paper") {
+    return "You win! scissors beats paper!";
+  } else if (playerSelection === "paper" && computerSelection === "paper") {
+    return "You both chose paper!";
+  } else if (
+    playerSelection === "scissors" &&
+    computerSelection === "scissors"
+  ) {
+    return "You both chose scissors!";
+  }
 
   // paper and rock
+  if (playerSelection === "paper" && computerSelection === "rock") {
+    return "You win! paper beats rock!";
+  } else if (playerSelection === "rock" && computerSelection === "paper") {
+    return "You lose! paper beats rock!";
+  } else if (playerSelection === "paper" && computerSelection === "paper") {
+    return "You both chose paper!";
+  } else if (playerSelection === "rock" && computerSelection === "rock") {
+    return "You both chose rock!";
+  }
 }
 
 playRound("rock", getComputerChoice());
