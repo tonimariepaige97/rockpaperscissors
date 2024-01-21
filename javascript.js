@@ -22,3 +22,9 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice());
+
+// write a function that plays a single round of Rock Paper Scissors.
+
+// playerSelection and computerSelection
+
+function playRound(playerSelection, computerSelection) {}
