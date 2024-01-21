@@ -30,11 +30,24 @@ function getComputerChoice() {
 // if player selection chooses rock and rock goes against computer selection who chose scissors, goes against scissors, player selection wins
 
 function playRound(playerSelection, computerSelection) {
+  // rock and scissors
   if (playerSelection === "rock" && computerSelection === "scissors") {
     return "You win! rock beats scissors!";
   } else if (playerSelection === "scissors" && computerSelection === "rock") {
     return "You lose! rock beats scissors!";
+  } else if (playerSelection === "rock" && computerSelection === "rock") {
+    return "you both chose rock!";
+  } else if (
+    playerSelection === "scissors" &&
+    computerSelection === "scissors"
+  ) {
+    return "you both chose scissors!";
   }
+
+  // paper and scissors
+  // if (playerSelection === "" )
+
+  // paper and rock
 }
 
 playRound("rock", getComputerChoice());
