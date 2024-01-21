@@ -21,10 +21,26 @@ function getComputerChoice() {
   return choices[randomNumberRounded];
 }
 
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
 
 // write a function that plays a single round of Rock Paper Scissors.
 
 // playerSelection and computerSelection
 
-function playRound(playerSelection, computerSelection) {}
+// if player selection chooses rock and rock goes against computer selection who chose scissors, goes against scissors, player selection wins
+
+function playRound(playerSelection, computerSelection) {
+  if (playerSelection === "rock" && computerSelection === "scissors") {
+    return "You win! rock beats scissors!";
+  } else if (playerSelection === "scissors" && computerSelection === "rock") {
+    return "You lose! rock beats scissors!";
+  }
+}
+
+playRound("rock", getComputerChoice());
+
+// function add(num1, num2, num3) {
+//   console.log(num2);
+// }
+
+// add(8, 9);
