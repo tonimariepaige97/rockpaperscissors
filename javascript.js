@@ -1,3 +1,6 @@
+// created a variable to insert user input
+let sign = prompt("rock, scissors, or paper?");
+
 // rock beats scissors
 
 // paper beats rock
@@ -31,49 +34,48 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
   // rock and scissors
+
   if (playerSelection === "rock" && computerSelection === "scissors") {
-    return "You win! rock beats scissors!";
+    console.log("You win! rock beats scissors!");
   } else if (playerSelection === "scissors" && computerSelection === "rock") {
-    return "You lose! rock beats scissors!";
+    console.log("You lose! rock beats scissors!");
   } else if (playerSelection === "rock" && computerSelection === "rock") {
-    return "You both chose rock!";
+    console.log("You both chose rock!");
   } else if (
     playerSelection === "scissors" &&
     computerSelection === "scissors"
   ) {
-    return "You both chose scissors!";
-  }
-
-  // paper and scissors
-  if (playerSelection === "paper" && computerSelection === "scissors") {
-    return "You lose! scissors beats paper!";
+    console.log("You both chose scissors!");
+  } else if (playerSelection === "paper" && computerSelection === "scissors") {
+    console.log("You lose! scissors beats paper!");
   } else if (playerSelection === "scissors" && computerSelection === "paper") {
-    return "You win! scissors beats paper!";
+    console.log("You win! scissors beats paper!");
   } else if (playerSelection === "paper" && computerSelection === "paper") {
-    return "You both chose paper!";
+    console.log("You both chose paper!");
   } else if (
     playerSelection === "scissors" &&
     computerSelection === "scissors"
   ) {
-    return "You both chose scissors!";
-  }
-
-  // paper and rock
-  if (playerSelection === "paper" && computerSelection === "rock") {
-    return "You win! paper beats rock!";
+    console.log("You both chose scissors!");
+  } else if (playerSelection === "paper" && computerSelection === "rock") {
+    console.log("You win! paper beats rock!");
   } else if (playerSelection === "rock" && computerSelection === "paper") {
-    return "You lose! paper beats rock!";
+    console.log("You lose! paper beats rock!");
   } else if (playerSelection === "paper" && computerSelection === "paper") {
-    return "You both chose paper!";
+    console.log("You both chose paper!");
   } else if (playerSelection === "rock" && computerSelection === "rock") {
-    return "You both chose rock!";
+    console.log("You both chose rock!");
   }
 }
 
-playRound("rock", getComputerChoice());
+// function to play a game best of five that keeps the score and reports the winner and the loser in the end
 
-// function add(num1, num2, num3) {
-//   console.log(num2);
-// }
+function game() {
+  playRound(sign, getComputerChoice());
+  playRound(sign, getComputerChoice());
+  playRound(sign, getComputerChoice());
+  playRound(sign, getComputerChoice());
+  playRound(sign, getComputerChoice());
+}
 
-// add(8, 9);
+game();
